@@ -177,7 +177,7 @@ Update the [conf.py](app/config/conf.py) file with your specific configurations.
 | `TIME_SPAN`                                                               | Alert polling time span as seconds | `3600`                                                                  |
 | `RETRY_LIVE_DELAY and MAX_LIVE_RETRY`                                     | `RETRY_LIVE_DELAY and MAX_LIVE_RETRY`| `20 sec and 3 times retry default`                                      |
 
-### Creating Microsoft BLOB storage account creation
+### Creating Microsoft BLOB storage account 
 
 - Open [https://portal.azure.com/](https://portal.azure.com) and `Storage accounts` service
 
