@@ -156,7 +156,7 @@ The related credentials must be well secured.
 | `EDR_ENRICHMENT` > | `ACTIVE`                                                                                             | Endpoint Detection Response module enrichment status [`True`/`False`] |
 | `EDR_ENRICHMENT` > | `SELECTED_SECTIONS`                                                                                  | Selected sections for enrichment comments                             |
 | `AV_ENRICHMENT` > | `ACTIVE`                                                                                             | Anti Virus module enrichment status [`True`/`False`]                  |
-| `EDR_ENRICHMENT` > | `SELECTED_SECTIONS`                                                                                  | Selected sections for enrichment comments                             |
+| `AV_ENRICHMENT` > | `SELECTED_SECTIONS`                                                                                  | Selected sections for enrichment comments                             |
 | `INGESTION` > | `EDR_BASED_INGESTION`                                                                                | Enable or Disable ingestion from EDR module of MDE [`True`/`False`]   |
 | `INGESTION` > | `AV_BASED_INGESTION`                                                                                 | Enable or Disable ingestion from AV module of MDE [`True`/`False`]    |
 | `TIME_SPAN`                                                    | Alert polling time span as seconds                                                                   | `3600`                                                                |
