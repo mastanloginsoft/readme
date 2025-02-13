@@ -189,7 +189,9 @@ The related credentials must be well secured.
 
 ![21](img/21.png)
 
+
 - Copy `Store the SAS token in the PowerShell script and prepend a '?' before the key, like this: $signedAuthorizationKey = '?abcd1234'`
+
 ![22](img/22.png)
 
  Configuration MS BLOB  (MicrosoftDefenderConfig)     [conf.py](app/config/conf.py) file. | Description                  | Default                            |
