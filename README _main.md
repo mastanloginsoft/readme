@@ -200,7 +200,7 @@ The related credentials must be well secured.
 
 ## VMRay Configurations
 
-The Connector API key will stay in the connector and be used to fetch analysis.
+The VMRay API key will be utilized to retrieve the analysis results.
 Create VMRay API key by following the steps below:
   1. Create a user dedicated for this API key (to avoid that the API key is deleted if an employee leaves)
   2. Create a role that allows to "View shared submission, analysis and sample" and "Submit sample, manage own jobs, reanalyse old analyses and regenerate analysis reports".
@@ -219,8 +219,8 @@ Create VMRay API key by following the steps below:
 | `SUBMISSION_TAGS`| Tags for submitted samples                                                                           | `MicrosoftDefenferForEndpoint`                                           |
 | `ANALYSIS_TIMEOUT`| Timeout for submission analyses as seconds                                                           | `120`                                                                    |
 | `ANALYSIS_JOB_TIMEOUT`| Timeout for analysis job in wait_submissions as seconds                                              | `300`                                                                    |
-| `RETRY_DELAY` | The amount of time (in seconds) to wait between retry attempts when submitting samples to VMRay      | 30                                                                       |
-| `MAX_RETRY` | The maximum number of retry attempts the system will make when submitting samples to VMRay in case of failure                                               | 3                                                                        |
+| `VMRAY_RETRY_DELAY` | The amount of time (in seconds) to wait between retry attempts when submitting samples to VMRay      | 30                                                                       |
+| `VMRAY_MAX_RETRY` | The maximum number of retry attempts the system will make when submitting samples to VMRay in case of failure                                               | 3                                                                        |
 
 
 ## General Connector Configurations
@@ -345,6 +345,6 @@ during execution.
   - Log Levels: Different log levels (e.g., INFO, DEBUG, WARNING,  ERROR) are used to categorize log messages. This helps in filtering logs and finding relevant information easily during troubleshooting.
 
 
-- Debugging
+## Debugging
 
   - All logs will be stored in the log/microsoft-defender-connector.log file. This log provides detailed information about the connector's operations and can be used to track its progress and troubleshoot any issues.
