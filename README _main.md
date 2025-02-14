@@ -176,7 +176,7 @@ The related credentials must be well secured.
 
 ![13](img/13.png)
 
-- Click `New Container and give Container name and click on create`
+- Click `New Container` and give Container Name and click on `create`
 
 ![14](img/14.png)
 
@@ -190,7 +190,7 @@ The related credentials must be well secured.
 ![21](img/21.png)
 
 
-- Copy `Store the SAS token in the PowerShell script and prepend a '?' before the key, like this: $signedAuthorizationKey = '?abcd1234'`
+- Copy `Store the SAS token` in the PowerShell script and prepend a '?' before the key, like this: `$signedAuthorizationKey = '?abcd1234'`
 
 ![22](img/22.png)
 
