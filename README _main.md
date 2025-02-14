@@ -286,8 +286,18 @@ After running the Docker container you can see connector logs in the log directo
 -------------------------------------------------------------------------------------------------------------------------
 ## Version 2.0 Release Notes:
     1) File Quarantine and Upload Process
+        - Extract Quarantined Files from Microsoft Defender
+        - Upload Files to Microsoft Blob Storage
+        - Retrieve Files from Microsoft Blob Storage
+        - Submit Files to VMRay for Analysis
+        - Folder Existence Check and Cleanup
+        
     2) Error Handling, Retry Logic, and Logging
+        - Error Handling
+        - Retry Logic
+        - Logging
     3) Debugging
+        - Logs
 
 ## 1. Release Notes - File Quarantine and Upload Process
 Overview
@@ -353,5 +363,5 @@ during execution.
 
 
 ## 3. Debugging
-
+- Logs
   - All logs will be stored in the log/microsoft-defender-connector.log file. This log provides detailed information about the connector's operations and can be used to track its progress and troubleshoot any issues.
