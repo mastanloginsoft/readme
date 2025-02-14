@@ -285,18 +285,18 @@ After running the Docker container you can see connector logs in the log directo
 
 -------------------------------------------------------------------------------------------------------------------------
 ## Version 2.0 Release Notes:
-    1) File Quarantine and Upload Process
+    1. **File Quarantine and Upload Process**
         - Extract Quarantined Files from Microsoft Defender
         - Upload Files to Microsoft Blob Storage
         - Retrieve Files from Microsoft Blob Storage
         - Submit Files to VMRay for Analysis
         - Folder Existence Check and Cleanup
         
-    2) Error Handling, Retry Logic, and Logging
+    2. **Error Handling, Retry Logic, and Logging**
         - Error Handling
         - Retry Logic
         - Logging
-    3) Debugging
+    3. **Debugging**  
         - Logs
 
 ## 1. Release Notes - File Quarantine and Upload Process
@@ -304,14 +304,14 @@ Overview
 
 This update focuses on the process of extracting quarantined files from Microsoft Defender, uploading those files to Microsoft Blob Storage, retrieving the files from the Blob, and submitting them for analysis to VMRay. The process includes a series of key steps that ensure proper handling, uploading, and submission of quarantine files, including validation, error handling, and retries.
 
-Key Highlights:
+**Key Highlights:**
 
-- Extract Quarantined Files from Microsoft Defender
+- **Extract Quarantined Files from Microsoft Defenderv**
   - The system extracts files marked as quarantined in Microsoft Defender for Endpoint.
   - The files are stored temporarily on the local system and ready for upload.
 
 
-- Upload Files to Microsoft Blob Storage
+- **Upload Files to Microsoft Blob Storage**
   - Once the files are extracted, they are uploaded to Microsoft Blob Storage.
   - The script accepts the following parameters for upload:
      - accountName: The Azure storage account name.
@@ -320,42 +320,42 @@ Key Highlights:
   - The upload process ensures that the files are stored securely in Azure Blob storage for further processing.
 
 
-- Retrieve Files from Microsoft Blob Storage
+- **Retrieve Files from Microsoft Blob Storage**
    - The system fetches the files stored in the specified Azure Blob container.
    - It retrieves the necessary blobs for submission to VMRay based on the provided containerName and accountName.
 
 
-- Submit Files to VMRay for Analysis
+- **Submit Files to VMRay for Analysis**
   - The retrieved files are submitted to VMRay for malware analysis.
   - The script includes mechanisms for retrying failed submissions, ensuring reliability in case of intermittent issues.
 
 
-- Folder Existence Check and Cleanup
+- **Folder Existence Check and Cleanup**
     - Before starting the process, the script checks if the quarantine folder already exists. If it exists, it is deleted to avoid conflicts.
     - After the files are submitted, the folder is cleaned up to ensure that no leftover files remain in the system.
     - Final cleanup ensures that the temporary folder used for storage is removed once the process is complete.
 
 ## 2. Release Notes - Error Handling, Retry Logic, and Logging
 
-Overview
+**Overview**
 
 This update introduces error handling, retry logic, and detailed logging to improve the reliability and 
 traceability of the connector working process. These enhancements ensure that the system can recover 
 from transient failures, log useful information for troubleshooting, and gracefully handle unexpected errors 
 during execution.
 
-- Error Handling:
+- **Error Handling:**
 
   - Comprehensive Error Detection: The system includes checks to identify issues such as missing files, network interruptions, or permission errors during various stages of the process (file extraction, upload, and submission).
   - Custom Error Messages: Meaningful error messages are logged, providing specific details on what went wrong (e.g., "File not found", "Network timeout", "Permission denied").
 
 
-- Retry Logic:
+- **Retry Logic:**
 
   - Automatic Retries: For operations that may fail due to transient issues (e.g., network connectivity problems), the system implements a retry mechanism. The script attempts the operation multiple times before logging an error and exiting.
   - Configurable Retry Count and Delay: The number of retries and the delay between attempts can be adjusted via configuration settings, allowing flexibility in handling intermittent issues.
 
-- Logging:
+- **Logging:**
 
   - Detailed Logging: The system logs key steps, success and failure messages, and any relevant data during the entire execution flow.
       
@@ -363,5 +363,5 @@ during execution.
 
 
 ## 3. Debugging
-- Logs
+- **Logs**
   - All logs will be stored in the log/microsoft-defender-connector.log file. This log provides detailed information about the connector's operations and can be used to track its progress and troubleshoot any issues.
