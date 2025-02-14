@@ -282,6 +282,8 @@ You can create and start Docker image with Dockerfile after completing the confi
 
 After running the Docker container you can see connector logs in the log directory on your host machine.
 
+
+-------------------------------------------------------------------------------------------------------------------------
 ## Version 2.0 Release Notes:
     1) File Quarantine and Upload Process
     2) Error Handling, Retry Logic, and Logging
