@@ -282,9 +282,12 @@ You can create and start Docker image with Dockerfile after completing the confi
 
 After running the Docker container you can see connector logs in the log directory on your host machine.
 
+## Version 2.0 Release Notes:
+    1) File Quarantine and Upload Process
+    2) Error Handling, Retry Logic, and Logging
+    3) Debugging
 
-
-## Release Notes - File Quarantine and Upload Process -1
+## 1. Release Notes - File Quarantine and Upload Process
 Overview
 
 This update focuses on the process of extracting quarantined files from Microsoft Defender, uploading those files to Microsoft Blob Storage, retrieving the files from the Blob, and submitting them for analysis to VMRay. The process includes a series of key steps that ensure proper handling, uploading, and submission of quarantine files, including validation, error handling, and retries.
@@ -320,7 +323,7 @@ Key Highlights:
     - After the files are submitted, the folder is cleaned up to ensure that no leftover files remain in the system.
     - Final cleanup ensures that the temporary folder used for storage is removed once the process is complete.
 
-## Release Notes - Error Handling, Retry Logic, and Logging -2
+## 2. Release Notes - Error Handling, Retry Logic, and Logging
 
 Overview
 
@@ -347,6 +350,6 @@ during execution.
   - Log Levels: Different log levels (e.g., INFO, DEBUG, WARNING,  ERROR) are used to categorize log messages. This helps in filtering logs and finding relevant information easily during troubleshooting.
 
 
-## Debugging
+## 3. Debugging
 
   - All logs will be stored in the log/microsoft-defender-connector.log file. This log provides detailed information about the connector's operations and can be used to track its progress and troubleshoot any issues.
