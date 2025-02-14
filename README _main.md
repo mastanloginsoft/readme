@@ -285,6 +285,7 @@ After running the Docker container you can see connector logs in the log directo
 
 -------------------------------------------------------------------------------------------------------------------------
 ## Version 2.0 Release Notes:
+
     1. **File Quarantine and Upload Process**
         - Extract Quarantined Files from Microsoft Defender
         - Upload Files to Microsoft Blob Storage
@@ -296,11 +297,12 @@ After running the Docker container you can see connector logs in the log directo
         - Error Handling
         - Retry Logic
         - Logging
+        
     3. **Debugging**  
         - Logs
 
 ## 1. Release Notes - File Quarantine and Upload Process
-Overview
+**Overview**
 
 This update focuses on the process of extracting quarantined files from Microsoft Defender, uploading those files to Microsoft Blob Storage, retrieving the files from the Blob, and submitting them for analysis to VMRay. The process includes a series of key steps that ensure proper handling, uploading, and submission of quarantine files, including validation, error handling, and retries.
 
@@ -314,9 +316,9 @@ This update focuses on the process of extracting quarantined files from Microsof
 - **Upload Files to Microsoft Blob Storage**
   - Once the files are extracted, they are uploaded to Microsoft Blob Storage.
   - The script accepts the following parameters for upload:
-     - accountName: The Azure storage account name.
-     - containerName: The name of the Blob container where the files are uploaded.
-     - evidences: A list of the files to be uploaded.
+     - **accountName**: The Azure storage account name.
+     - **containerName**: The name of the Blob container where the files are uploaded.
+     - **evidences**: A list of the files to be uploaded.
   - The upload process ensures that the files are stored securely in Azure Blob storage for further processing.
 
 
