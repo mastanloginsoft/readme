@@ -20,7 +20,7 @@ It also retrieves IOC values from VMRay and submits them into Microsoft Defender
     ├─── lib                                       # Library directory
     │   └─── __init__.py 				
     │   └─── MicrosoftDefender.py                  # Microsoft Defender 
-    │   └─── Upload_quarantine_files_blob.ps1      # Uploading quarantine files to MS blob
+    │   └─── SubmitEvidencesToVmray.ps1            # Uploading quarantine files to MS blob
     for Endpoint API functions
     │   └─── VMRay.py                              # VMRay API functions
     │   └─── Models.py                             # Helper classes for data processing
@@ -259,7 +259,7 @@ Create VMRay API key by following the steps below:
 
 ## Powershell Script Configuration
 
-- Set the `$signedAuthorizationKey` variable in [Upload_quarantine_files_blob.ps1](app/lib/Upload_quarantine_files_blob.ps1) file with SAS token. This script automatically uploads to MS blob evidences that is quarantined by the Antivirus module of Microsoft Defender for Endpoint.
+- Set the `$signedAuthorizationKey` variable in [SubmitEvidencesToVmray.ps1](app/lib/SubmitEvidencesToVmray.ps1) file with SAS token. This script automatically uploads to MS blob evidences that is quarantined by the Antivirus module of Microsoft Defender for Endpoint.
 
 # Running the Connector
 
