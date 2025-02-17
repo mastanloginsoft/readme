@@ -85,7 +85,6 @@ Update the [conf.py](app/config/conf.py) file with your specific configurations.
 |:---------------------|:--------------------|:---------------- |
 | Alert                | Alert.Read.All      | Needed to retrieve alerts and related evidence  |
 | Alert                | Alert.ReadWrite.All | Needed to enrich alerts with sample information  |
-| Machine              | Machine.CollectForensics | Needed to run collect investigation package action |
 | Machine              | Machine.LiveResponse | Needed to gather evidences from machines |
 | Machine              | Machine.Read.All | Needed to retrieve information about machines  |
 | Ti                   | Ti.Read.All | Needed to retrieve indicators  |
@@ -140,7 +139,6 @@ The related credentials must be well secured.
 | `API` > `AUTH_URL`                                             | Authentication Url to authenticate Azure Active Directory                                            | `https://login.microsoftonline.com/<TENANT_ID>/oauth2/token`          |
 | `API` > `RESOURCE_APPLICATION_ID_URI`                          | Resource Application ID Uri to authenticate Azure Active Directory                                   | `https://api.securitycenter.microsoft.com`                            |
 | `API` > `URL`                                                  | URL to access Microsoft Defender for Endpoint API                                                    | `https://api.securitycenter.microsoft.com`                            |
-| `API` > `USER_AGENT`                                           | User-Agent value to use for Microsoft Defender for Endpoint API                                      | `MdePartner-VMRay-VMRayAnalyzer/4.4.1`                                |
 | `DOWNLOAD` > `DIR`                                             | Download directory name                                                                              | `downloads`                                                           |
 | `ALERT` > `SEVERITIES`                                         | Selected Alert severities for filtering                                                              | [`UnSpecified`, `Informational`, `Low`, `Medium`, `High`]             |
 | `ALERT` > `STATUSES`                                           | Selected Alert statuses for filtering                                                                | [`Unknown`, `New`, `InProgress`, `Resolved`]                          |
@@ -308,7 +306,7 @@ This update focuses on the process of extracting quarantined files from Microsof
 
 **Key Highlights:**
 
-- **Extract Quarantined Files from Microsoft Defenderv**
+- **Extract Quarantined Files from Microsoft Defender**
   - The system extracts files marked as quarantined in Microsoft Defender for Endpoint.
   - The files are stored temporarily on the local system and ready for upload.
 
